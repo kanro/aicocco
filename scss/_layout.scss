@@ -1,0 +1,351 @@
+@charset "UTF-8";
+
+@import "variables";
+@import "mixin";
+
+
+/* 余白 ---------------------- */
+.block-sec {
+	margin-bottom: 4em;
+}
+
+/* ベースレイアウト ---------------------- */
+
+.l-header {
+    &__main {
+        width: 100%;
+        height: 51px;
+        border-bottom: 1px solid $color-gray;
+    }
+    &__inner {
+        position: relative;
+        width: 100%;
+        height: 50px;
+    }
+    &__brand {
+        position: absolute;
+        left: 15px;
+        line-height: 2.2;
+    }
+    &__btn {
+        position: absolute;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        color: #fff;
+        background: $color-text;
+        text-align: center;
+        .nav-icon {
+            line-height: 3.5;
+            color: #fff;
+        }
+    }
+}
+
+.l-breadcrumb {
+	&__wrap {
+		background: $color2;
+	}
+	ul {
+		padding: 5px 15px;
+		li {
+			display: inline-block;
+			margin-right: 5px;
+			&::after {
+				padding: 0 10px;
+				content: ">";
+			}
+		}
+	}
+}
+
+.l-wrapper {
+    padding: 60px 15px;
+}
+
+.l-panel {
+	.list {
+		&__body {
+			width: 100%;
+			position: relative;
+			 &_tmb {
+				 width: 150px;
+				 height: 150px;
+				 overflow:hidden;
+				 position:relative;
+				 img {
+					 position: absolute;
+					 width: auto;
+					 height: 100%;
+				 }
+			 }
+			 &_text {
+				 float: left;
+			 }
+		}
+	}
+    &__summary {
+        width: 250px;
+        height: auto;
+        background: $color2;
+        &_textArea {
+            padding: 5px 15px 15px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    &__post {
+        width: 300px;
+        height: auto;
+        background: $color2;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        &_body {
+            padding: 5px 20px;
+        }
+        &_status {
+            ul li {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+/* エントリー ---------------------- */
+.l-article {
+	margin: 0 auto;
+	padding-bottom: 60px;
+	width: 600px;
+	.mainImg {
+		display: block;
+		img {
+			width: 100%;
+		}
+	}
+	.entry-head {
+		padding: 15px 0;
+		 &__title {
+			 margin-bottom: 15px;
+			 padding-bottom: 20px;
+			 font-weight: bold;
+			 border-bottom: 1px solid #000;
+		 }
+		 ul li {
+			 margin-right: 10px;
+			 display: inline-block;
+		 }
+	}
+	.entry-main {
+		.info {
+			margin: 30px 0 50px;
+			padding: 15px 15px;
+			border-radius: 2px;
+			background: $color-gray;
+			ul {
+				padding-left: 15px;
+			}
+		}
+	}
+}
+
+
+header {
+	border-top: 4px solid #001;
+}
+
+#nav-bar {
+	position: fixed;
+	width: 70px;
+	height: 100%;
+}
+
+#main-wrap {
+	width: calc(100% - 70px);
+	height: 100%;
+	margin-left: 70px;
+	background: #f4f4f2;
+	.contents-wrap {
+		width: 1130px;
+	}
+	.entry-page {
+		padding: 60px 25px 40px;
+		width: 800px;
+		float: right;
+		background-color: #f9f9f9;
+	}
+	.news {
+		position: relative;
+		margin-bottom: 30px;
+		padding: 10px;
+		background: #fff;
+		&__title {
+			width: 140px;
+			text-align: center;
+			font-size: 16px;
+			@include align-self(center);
+		}
+		&__list {
+			ul li {
+				list-style: none;
+				font-size: 14px;
+				line-height: 2;
+			}
+			&_more {
+				display: block;
+				position: absolute;
+				bottom: 15px;
+				right: 15px;
+				font-size: 14px;
+			}
+		}
+	}
+	.entry {
+		&__header {
+			margin-bottom: 40px;
+		}
+		&__info {
+			@include flexbox();
+			@include justify-content(space-between);
+			font-size: 14px;
+			color: darken($color-gray, 30%);
+		}
+		&__headline {
+			font-weight: bold;
+			&_title {
+				font-size: 21px;
+				line-height: 1.8;
+				color: $color5;
+			}
+			&_type1 {
+				font-size: 18px;
+				line-height: 1.8;
+				color: $color3;
+			}
+			&_type2 {
+				margin-top: 35px;
+				font-size: 16px;
+				line-height: 1.6;
+			}
+		}
+		&__text {
+			margin: 30px 0;
+			font-size: 15px;
+		}
+		&__item {
+			&_note {
+				font-size: 14px;
+				color: darken($color-gray, 35%);
+			}
+		}
+	}
+	.code-area {
+		ul {
+			padding-left: 20px;
+			list-style: disc;
+		}
+	}
+}
+
+/* 全体的なレイアウト ---------------------- */
+.wrapper {
+	@include flexbox();
+	.column {
+		&:first-child {
+			order: 1;
+		}
+		&:nth-child(2) {
+			order: 3;
+		}
+		&:last-child {
+			order: 2;
+		}
+	}
+}
+.contents-main {
+	padding: 60px 25px 40px;
+	width: 800px;
+	background-color: #f9f9f9;
+	.inner-block {
+		margin-bottom: 20px;
+	}
+}
+.contents-side {
+	margin-left: 70px;
+	padding: 60px 15px 40px;
+	width: 330px;
+	background: #f4f4f2;
+}
+.nav {
+	&__main {
+		position: fixed;
+		width: 70px;
+		background: #fff;
+	}
+}
+.footer {
+	padding: 15px 0;
+	clear: both;
+	display: block;
+	background: $color-footer;
+}
+
+/* entry ---------------------- */
+.entry {
+	&__head {
+		display: block;
+		&_date {
+			float: left;
+			margin: 15px 0 30px 0;
+			ul li {
+				display: inline-block;
+			}
+		}
+		&_category {
+			float: right;
+			margin: 15px 0 30px 0;
+		}
+	}
+	&__contents {
+		clear: both;
+	}
+}
+
+/* item-unit ---------------------- */
+.block {
+	&__flex {
+		@include flexbox();
+		@include justify-content(space-between);
+		&_item {
+			padding: 10px;
+			width: 45%;
+			background: $color2;
+		}
+	}
+}
+
+.section {
+	h2 {
+		font-size: 21px;
+		font-weight: bold;
+		border-top: 1px solid #000;
+		text-align: center;
+		&::before {
+			content: '';
+			margin: 0 auto;
+			padding-top: 15px;
+			display: block;
+			width: 160px;
+			border-top: 3px solid #000;
+		}
+	}
+}
+
+
+
+.flexbox {
+	@include flexbox();
+}

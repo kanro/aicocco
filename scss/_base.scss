@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+@import "variables";
+@import "mixin";
+
+@font-face {
+  font-family: "YuGothic M";
+  src: local("Yu Gothic Medium"),
+       local("Yu Gothic");
+  font-weight: 500;
+       /*
+         Chrome 58.0.3029.110 (64-bit) では
+         "Yu Gothic Medium" を認識しないバグあるため
+         "Yu Gothic" と font-weight も併せて指定。
+       */
+}
+
+/* ベース ---------------------- */
+body {
+	@include fontsize(15);
+	font-family: $basefont;
+	line-height: 1.6;
+	letter-spacing: 1.5px;
+	font-feature-settings: "palt" 1;
+	color: $color-text;
+}
+a {
+	color: $color-text;
+}
