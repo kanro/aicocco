@@ -173,3 +173,48 @@ h5 {
 		color: #fff;
 	}
 }
+
+#demo {
+	.brand-name {
+		font-family: 'Fredericka the Great', cursive, sans-serif;
+		@include fontsize(24);
+	}
+	/* 見出し ---------------------- */
+.heading {
+	font-weight: bold;
+	color: $color-text;
+	&-01 {
+		@include fontsize(20);
+	}
+	&-02 {
+		@include fontsize(18);
+	}
+	&-03 {
+		@include fontsize(15);
+	}
+	&-xlarge {
+		@include fontsize(28);
+	}
+	&-large {
+		@include fontsize(24);
+	}
+	&-small {
+		@include fontsize(14);
+	}
+}
+
+/* Footer ---------------------- */
+footer {
+	p {
+		@include fontsize(14);
+	}
+	ul li {
+		@include fontsize(14);
+		line-height: 3;
+	}
+	.p-copyright {
+		@include fontsize(13);
+		text-align: center;
+	}
+}
+}

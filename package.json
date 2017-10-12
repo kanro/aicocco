@@ -28,5 +28,13 @@
   "dependencies": {
     "gulp": "^3.9.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanro/aicocco.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kanro/aicocco/issues"
+  },
+  "homepage": "https://github.com/kanro/aicocco#readme",
   "description": ""
 }

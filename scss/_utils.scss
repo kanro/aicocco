@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+@import "variables";
+@import "mixin";
+
+/* 表示・非表示 ---------------------- */
+.br-sp {
+	display: block;
+	@include mq(large) {
+		display: none;
+	}
+}
+
+.sp-none {
+	display: none;
+	@include mq {
+		display: block;
+	}
+}
+.pc-none {
+	display: block;
+	@include mq {
+		display: none;
+	}
+}
+
+/* 余白・位置調整 ---------------------- */
+.u-text {
+	&.center {
+		text-align: center;
+	}
+}
