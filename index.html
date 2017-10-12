@@ -1,112 +1,156 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Style Guide</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Suranna" rel="stylesheet">
+
+	<!-- <link rel="stylesheet" href="css/oldstyle.css"> -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/theme.css">
+	<title>demo</title>
 </head>
-<body>
+<body id="demo">
+
 <header>
-    <div class="l-header__main">
-        <div class="l-header__inner">
-            <h1 class="l-header__brand header__title"><a href="index.html">header</a></h1>
-            <div class="l-header__btn nav-icon">
-                <a href="#" class="nav-icon"><i class="fa fa-bars" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </div>
+	<section class="l-header">
+		<div class="l-header__inner">
+			<div class="logo-brand">
+				<p class="brand-name">aicocco/demo</p>
+			</div>
+			<!-- モバイルメニュー -->
+			<div class="l-header-globalNav pc-none">
+				<div class="nav-icon">
+					<!-- <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a> -->
+					<div class="button_container" id="toggle">
+						<span class="top"></span>
+					    <span class="middle"></span>
+					    <span class="bottom"></span>
+					</div>
+					<div class="overlay" id="overlay">
+						<nav class="overlay-menu">
+							<ul>
+								 <li ><a href="#">Home</a></li>
+								 <li><a href="#">About</a></li>
+	      	  				     <li><a href="#">Work</a></li>
+	      	  				     <li><a href="#">Contact</a></li>
+		  				    </ul>
+						</nav>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- PCメニュー -->
+	<section id="gNav-pc" class="sp-none">
+		<nav class="blend">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+	            <li><a href="#">Downloads</a></li>
+	            <li><a href="#">More</a></li>
+	            <li><a href="#">Nice staff</a></li>
+	        </ul>
+	    </nav>
+	</section>
 </header>
 
-<div class="l-breadcrumb">
-    <div class="l-breadcrumb__wrap">
-        <ul class="breadcrumb_text">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">Category</a></li>
-            <li>entry page</li>
-        </ul>
-    </div>
+
+
+<!-- ▽▼▽ コンテンツエリア ▽▼▽ -->
+<div class="l-wrap">
+	<div class="l-main">
+		<h2 class="c-title_border c-title_center">エントリーページ</h2>
+
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+		<p>サンプルです</p><br>
+	</div><!-- l-main -->
+	<div class="l-sub">
+		<h2 class="c-title_border c-title_center">サブカラム</h2>
+	</div>
+</div><!-- l-wrap -->
+
+<!-- ▽▼▽ Topにもどる ▽▼▽ -->
+<div class="l-backTop">
+	<a href="#" class="topBtn">
+		<div class="u-text center">
+			<i class="fa fa-chevron-up" aria-hidden="true"></i>
+		</div>
+	</a>
 </div>
 
-<div class="l-wrapper">
-
-    <div class="l-article">
-        <div class="mainImg">
-            <img src="images/pic1.jpg" alt="サンプル画像1">
-        </div>
-        <div class="entry-head">
-            <h2 class="entry-head__title">もう知ってる？海外サイトで分割スクリーンレイアウトが流行中</h2>
-            <ul>
-                <li class="article_date">2017.09.27(thu)</li>
-                <li class="article_author">著者名</li>
-            </ul>
-        </div>
-        <div id="entry" class="entry-main">
-            <div class="info">
-                <p>グレーの部分</p>
-            </div>
-            <h3 class="heading heading__01">画面を大胆に真っ二つに割ったレイアウトが海外のWebサイトで流行中。</h3>
-            <p>分割スクリーンレイアウトは、非常に人気があって流行していますが、合理的かつ論理的な理由なしにとり入れてしまうとユーザー体験を損なうこともあるため、導入には少し勇気がいります。</p>
-            <h4 class="heading heading__02">なぜ分割スクリーンレイアウトを使うのか？</h4>
-            <p>分割スクリーンレイアウトは、非常に人気があって流行していますが、合理的かつ論理的な理由なしにとり入れてしまうとユーザー体験を損なうこともあるため、導入には少し勇気がいります。</p>
-            <h4 class="heading heading__03">なぜ分割スクリーンレイアウトを使うのか？</h4>
-            <p>分割スクリーンレイアウトは、非常に人気があって流行していますが、合理的かつ論理的な理由なしにとり入れてしまうとユーザー体験を損なうこともあるため、導入には少し勇気がいります。</p>
-            <div class="info">
-                <h5 class="info-text__title">info title</h5>
-                <p class="info-text">info</p>
-                <ul>
-                    <li>list1</li>
-                    <li>list2</li>
-                </ul>
-            </div>
-            <h4 class="heading heading__03">なぜ分割スクリーンレイアウトを使うのか？</h4>
-            <p>分割スクリーンレイアウトは、非常に人気があって流行していますが、合理的かつ論理的な理由なしにとり入れてしまうとユーザー体験を損なうこともあるため、導入には少し勇気がいります。</p>
-        </div>
-    </div>
-
-    <section class="area__topSummary">
-
-        <article class="l-panel__post">
-            <a href="#">
-                <img src="images/pic1.jpg" alt="サンプル画像1">
-                <div class="l-panel__post_body">
-                    <h2 class="article__title">「Zクロッカンシューザクザク」よりハロウィンだけの「カボザク」が新登場！</h2>
-                    <div class="l-panel__post_status">
-                        <ul>
-                            <li class="summary__status_date">2017.09.26</li>
-                            <li class="summary__status_date tag">tag</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-        </article>
-
-        <article class="l-panel">
-            <a href="#">
-                <div class="list__body">
-                    <div class="list__body_tmb">
-                        <img src="images/pic1.jpg" alt="サンプル画像1">
-                    </div>
-                    <div class="list__body_text">
-                        <h2 class="article__title_list">「Zクロッカンシューザクザク」よりハロウィンだけの「カボザク」が新登場！</h2>
-                    </div>
-                </div>
-            </a>
-        </article>
-
-        <div class="">
-            <p class="btn btn__normal w200"><a href="#">button</a></p>
-        </div>
-    </section>
-
+<div id="scrollTop">
+	<div><a href="#">TOP<i class="fa fa-chevron-up" aria-hidden="true"></i></a></div>
 </div>
-<footer class="footer">
-	<p class="footer__copylight">&copy;aiko horita</p>
+
+<!-- ▽▼▽ Footer ▽▼▽ -->
+<footer class="l-footer">
+	<div class="l-footer__inner">
+		<div class="l-block-footer">
+			<div class="l-box l-box-footer l-box__item1 sp-none">
+				<h3 class="heading heading-02">CONTACT</h3>
+				<div class="text-area">
+					<p>aicocco</p>
+					<p>mail<br class="br-sp"><span class="author-address">testxxx@mail.com</span></p>
+				</div>
+			</div>
+			<div class="l-box l-box-footer l-box__item1">
+				<h3 class="heading heading-02">LINK</h3>
+				<div class="text-area">
+					<ul>
+						<li><a href="#">Link1<span class="icon"><i class="fa fa-angle-right" aria-hidden="true"></i><span></a></li>
+						<li><a href="#">Link2<span class="icon"><i class="fa fa-angle-right" aria-hidden="true"></i><span></a></li>
+						<li><a href="#">Link3<span class="icon"><i class="fa fa-angle-right" aria-hidden="true"></i><span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="l-box l-box-footer l-box__item2">
+				<h3 class="heading heading-02">ABOUT</h3>
+				<div class="text-area">
+					<p>
+						textが入りますtextが入りますtextが入りますtextが入りますtextが入りますtextが入りますtextが入ります
+					</p>
+				</div>
+			</div>
+		</div><!-- l-block3 -->
+	</div><!-- l-footer__inner -->
+	<div class="l-footer__inner-copyright">
+		<p class="p-copyright">&copy;2017 aicocco</p>
+	</div>
 </footer>
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
