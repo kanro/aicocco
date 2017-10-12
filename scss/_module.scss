@@ -9,12 +9,13 @@
 	right: 20px;
 	bottom: 20px;
 	padding: .5em;
+	border-radius: 2px;
 	color: #fff;
-	background: $color-gray;
+	background: $color-pink;
 }
 
 /* ナビゲーションボタン ---------------------- */
-$color-background: #F5F5F5;
+$color-background: #dff5f0;
 $color-main: #FF5252;
 $color-active: #FFF;
 $color-link: #FFF;
@@ -180,8 +181,8 @@ h1 {
 
     li {
       display: block;
-      height: 10%;
-      height: calc(100% / 10);
+      height: 20%;
+      height: calc(100% / 5);
       min-height: 50px;
       position: relative;
       opacity: 0;
@@ -297,5 +298,48 @@ h1 {
 	nav.blend ul li a:hover:after,
 	nav.blend ul li a:hover:before {
 	  width: 100%;
+	}
+}
+
+// Parts
+.pickup {
+	position: relative;
+	padding: 15px;
+	width: 250px;
+	height: 150px;
+	background: url(../images/pic1.jpg) no-repeat;
+	background-size: 100%;
+	&::before {
+		position: absolute;
+		padding: 5px;
+		content: 'ラベル';
+	    top: 0;
+	    left: 0;
+		font-size: 13px;
+		color: #fff;
+		background: $color-pink;
+	}
+	&__link-text {
+		position: absolute;
+		left: 0;
+		bottom: -30px;
+	}
+}
+
+.section-line {
+	&_center h2 {
+		margin-bottom: 30px;
+		font-size: 21px;
+		font-weight: bold;
+		border-top: 1px solid #000;
+		text-align: center;
+		&::before {
+			content: '';
+			margin: 0 auto;
+			padding-top: 15px;
+			display: block;
+			width: 160px;
+			border-top: 3px solid #000;
+		}
 	}
 }

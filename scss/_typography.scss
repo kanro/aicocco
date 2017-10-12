@@ -3,183 +3,33 @@
 @import "variables";
 @import "mixin";
 
-/* 見出し ---------------------- */
-.header {
-	&__title {
-		font-size: 24px;
-        font-weight: bold;
-    }
-}
-.breadcrumb {
-	&_text {
-		@include fontsize(12);
-		color: $color-footer;
-	}
-}
-.summary {
-	&__status {
-		 &_title {
-			 @include fontsize(20);
-			 font-weight: bold;
-		 }
-		 &_date {
-			 padding-bottom: 10px;
-			 @include fontsize(12);
-		 }
-		 &_tag {
-			 padding: 3px 8px;
-			 @include fontsize(12);
-			 background: #fff;
-			 border-radius: 2px;
-			 color: $color-footer;
-		 }
-	}
-}
-.article {
-	&__title {
-		padding: 10px 0;
-		@include fontsize(12);
-		font-weight: bold;
-		&_list {
-			@include fontsize(14);
-			font-weight: bold;
-		}
-	}
-	&_date {
-		@include fontsize(12);
-	}
-	&_author {
-		font-weight: bold;
-		@include fontsize(12);
-	}
-	&__heading {
-		&_01 {
-			font-weight: bold;
-			@include fontsize(24);
-		}
-	}
-}
-#entry {
-	.heading {
-		font-weight: bold;
-		&__01 {
-			margin-bottom: 20px;
-			@include fontsize(20);
-		}
-		&__02 {
-			margin: 50px 0 0;
-			padding: 10px 15px;
-			@include fontsize(18);
-			border-top: 3px solid $color4;
-			background: $color2;
-		}
-		&__03 {
-			margin: 40px 0 0;
-			padding-bottom: 5px;
-			border-bottom: 2px solid #000;
-		}
-	}
-	p {
-		margin: 25px 0 0;
-		@include fontsize(15);
-	}
-	.info-text {
-		margin: 10px 0 0;
-		&__title {
-			font-weight: bold;
-		}
-	}
-}
-
-
-h1 {
-	@include fontsize(32);
-}
-h2 {
+.brand-name {
+	font-family: 'Fredericka the Great', cursive, sans-serif;
 	@include fontsize(24);
 }
-h3 {
-	@include fontsize(20);
-}
-h4 {
-	@include fontsize(18);
-}
-h5 {
-	@include fontsize(15);
-}
-.heading {
-	font-weight: bold;
-	color:  $color-text;
-	&__title {
-		&_main {
-			// margin-bottom: 20px;
-			@include fontsize(24);
-		}
-		&_sub {
-			// margin-bottom: 15px;
-			@include fontsize(20);
-		}
-		&_lead {
-			// margin-bottom: 15px;
-			@include fontsize(18);
-		}
-	}
-}
 
-/* エントリー ---------------------- */
-#entry {
-	.title {
-		margin-bottom: 10px;
-		font-weight: bold;
-		&__primary {
-			margin-top: 10px;
-			margin-bottom: 20px;
-		}
-		&__secondary {
-			margin-top: 10px;
-			margin-bottom: 15px;
-		}
-	}
-	.text {
-		margin-bottom: 30px;
-	}
-	.note {
-		margin-bottom: 30px;
-		padding: 10px;
-		border-radius: 3px;
-		background: #fff;
-	}
-}
-.text {
-	&__date {
-		color: darken($color-gray, 30%);
-		@include fontsize(13);
-	}
-	&__tag {
-		@include fontsize(13);
-	}
-}
-.note {
-	padding: 10px 0;
-	@include fontsize(14);
-	color: darken($color-gray, 30%);
+p {
+   @include fontsize(15);
+   line-height: 1.5;
 }
 
 /* 見出し ---------------------- */
-.footer {
-	&__copylight {
-		text-align: center;
-		@include fontsize(12);
-		color: #fff;
-	}
+h1,.h1 {
+	@include fontsize(32);
+}
+h2,.h2 {
+	@include fontsize(24);
+}
+h3,.h3 {
+	@include fontsize(20);
+}
+h4,.h4 {
+	@include fontsize(18);
+}
+h5,.h5 {
+	@include fontsize(15);
 }
 
-#demo {
-	.brand-name {
-		font-family: 'Fredericka the Great', cursive, sans-serif;
-		@include fontsize(24);
-	}
-	/* 見出し ---------------------- */
 .heading {
 	font-weight: bold;
 	color: $color-text;
@@ -203,6 +53,12 @@ h5 {
 	}
 }
 
+.note {
+	padding: 10px 0;
+	@include fontsize(14);
+	color: darken($color-gray, 30%);
+}
+
 /* Footer ---------------------- */
 footer {
 	p {
@@ -216,5 +72,4 @@ footer {
 		@include fontsize(13);
 		text-align: center;
 	}
-}
 }
