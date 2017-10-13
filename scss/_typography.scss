@@ -5,7 +5,9 @@
 
 .brand-name {
 	font-family: 'Fredericka the Great', cursive, sans-serif;
-	@include fontsize(24);
+	@include fontsize(38);
+	line-height: 30;
+	color: #fff;
 }
 
 p {
@@ -61,15 +63,9 @@ h5,.h5 {
 
 /* Footer ---------------------- */
 footer {
-	p {
-		@include fontsize(14);
-	}
-	ul li {
-		@include fontsize(14);
-		line-height: 3;
-	}
-	.p-copyright {
+	.copyright {
 		@include fontsize(13);
 		text-align: center;
+		color: #fff;
 	}
 }

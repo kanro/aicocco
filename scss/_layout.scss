@@ -3,99 +3,59 @@
 @import "variables";
 @import "mixin";
 
-/* header ---------------------- */
-.l-header {
+.l-wrapper {
+	background: $color-wrap;
+}
+.container-split {
+	width: 100%;
+	height: auto;
+	@include mq(large) {
+		width: 50%;
+		height: 100vh;
+	}
+	&-left {
+		position: relative;
+		background: url(../images/bg1s.jpg) no-repeat;
+		background-size: cover;
+		@include mq(large) {
+			position: fixed;
+		}
+	}
+	&-right {
+		position: relative;
+		right: 0;
+		background-color: #f0fbfc;
+		animation: bg-color 15s infinite;
+	    -webkit-animation: bg-color 15s infinite;
+		@include mq(large) {
+			position: absolute;
+			overflow-y: scroll;
+		}
+	}
+	.inner {
+		padding: 30px;
+	}
+}
+// グラデーション背景色
+@-webkit-keyframes bg-color {
+  0% { background-color: #f0fbfc; }
+  30% { background-color: #f0f5fc; }
+  60% { background-color: #f0fbfc; }
+  100% { background-color: #f0fcf7; }
+}
+@keyframes bg-color {
+  0% { background-color: #f0fbfc; }
+  30% { background-color: #f0f5fc; }
+  60% { background-color: #f0fbfc; }
+  100% { background-color: #f0fcf7; }
+}
+/* Footer ---------------------- */
+.l-footers {
 	position: relative;
-	background: $color-pink;
-	&__inner {
-	   height: 51px;
-	   border-bottom: 1px solid lighten($color-gray, 40%);
-	}
-	.logo-brand {
-	   position: absolute;
-	   padding: 8px 15px;
-	   width: 250px;
-	   height: auto;
-	}
-}
-
-/* footer ---------------------- */
-.l-backTop {
-	margin: 0 auto;
-	padding: 10px;
-	color: #fff;
-	background: darken($color-gray, 30%);
-}
-.l-footer {
-	background:$color-footer;
-	&__inner {
-	   padding: 10px 10px;
-	   @include mq {
-		   padding: 10px 15px;
-	   }
-	   &-copyright {
-		   padding: 10px 0;
-		   border-top: 1px solid lighten($color-gray, 30%);
-	   }
-	}
-	ul {
-	   @include mq {
-		   margin-top: 0;
-	   }
-	   li {
-		   border-bottom: 1px dotted lighten($color-gray, 30%);
-		   &:last-child {
-			   border: none;
-		   }
-	   }
-   }
-   .text-area {
-      padding: 15px 0;
-   }
-   .author-address {
-      padding-left: 0;
-      @include mq(large) {
-   	   padding-left: 10px;
-      }
-   }
-   .icon {
-      float: right;
-   }
-}
-
-/* コンテンツ ---------------------- */
-.l-main {
-	height: 1500px;
-	padding: 30px 15px;
-}
-.l-sub {
-	padding: 30px 15px;
-	background: $color-sub;
-}
-
-/* ブロック ---------------------- */
-.l-block {
-	&-footer {
-	   @include flexbox();
-	   @include flex-direction(column-reverse);
-	   @include mq {
-		   @include flex-direction(row);
-		   @include justify-content(space-between);
-	   }
-	}
-}
-.l-box {
-	padding: 20px;
-	&__item1 {
-	   flex: 1
-	}
-	&__item2 {
-	   flex: 2
-	}
-	&-footer {
-	   height: 180px;
-	   @include mq {
-		   height: 200px;
-	   }
+	bottom: 20px;
+	width: 50%;
+	text-align: center;
+	@include mq(large) {
+		position: fixed;
 	}
 }
