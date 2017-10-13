@@ -6,8 +6,11 @@
 .brand-name {
 	font-family: 'Fredericka the Great', cursive, sans-serif;
 	@include fontsize(38);
-	line-height: 30;
+	line-height: 10;
 	color: #fff;
+	@include mq {
+		line-height: 30;
+	}
 }
 
 p {
