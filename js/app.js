@@ -7,7 +7,7 @@ console.log('Hello World'); //テスト用
 
 // brand logo
 $(document).ready(function() {
-	$('.inner').hide().fadeIn(2000);
+	$('.inner').hide().fadeIn(1000);
 	$('#logo').hide().fadeIn(3000);
 });
 
