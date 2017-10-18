@@ -26,7 +26,8 @@
     "run-sequence": "^2.1.0"
   },
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "vivus": "^0.4.2"
   },
   "repository": {
     "type": "git",

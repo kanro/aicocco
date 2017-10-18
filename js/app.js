@@ -5,6 +5,11 @@ console.log('Hello World'); //テスト用
 // 	$('body').html('<p>jQueryの動作チェック</p>');
 // });
 
+// brand logo
+$(document).ready(function() {
+  $('#logo').hide().fadeIn(4000);
+});
+
 // ナビゲーションボタン
 $('#toggle').click(function() {
    $(this).toggleClass('active');

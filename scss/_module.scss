@@ -3,6 +3,21 @@
 @import "variables";
 @import "mixin";
 
+/* ロゴアニメーション ---------------------- */
+.logo-brand {
+	path {
+		fill-opacity: 0;
+	    transition: fill-opacity 1s;
+	}
+	.logo-size {
+		width: 300px;
+		height: auto;
+		@include mq {
+			width: 400px;
+		}
+	}
+}
+
 /* トップにもどる ---------------------- */
 #scrollTop {
 	position: fixed;

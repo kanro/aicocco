@@ -5,14 +5,11 @@
 
 .brand-name {
 	font-family: 'Fredericka the Great', cursive, sans-serif;
-	@include fontsize(38);
-	line-height: 10;
+	@include fontsize(24);
 	color: #fff;
-	@include mq {
-		line-height: 20;
-	}
-	@include mq(xlarge) {
-		line-height: 30;
+	&::after {
+		content: 'portfolio';
+		color: #fff;
 	}
 }
 
