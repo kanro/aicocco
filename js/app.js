@@ -7,7 +7,7 @@ console.log('Hello World'); //テスト用
 
 // brand logo
 $(document).ready(function() {
-  $('#logo').hide().fadeIn(4000);
+  $('#logo').hide().fadeIn(3000);
 });
 
 // ナビゲーションボタン
